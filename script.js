@@ -96,7 +96,7 @@ function main() {
         current_operation = prompt("Enter the math operation to be performed (ADD,SUB,DIV, MULT, or CLR(clear result), press x to exit")
             .toUpperCase();
         if(current_operation === 'x') {
-            continue;
+            continue; // NOTE : not sure exacty why yours is broken but it probably has to do with this statment
         }
         // Get the 2 numbers for the operation
         let first_int = parseInt(prompt(`Enter the 1st number for ${current_operation}`));
@@ -119,6 +119,7 @@ function main() {
                 break;
             case 'CLR':
                 calculator_instance.clear_calculation_result();
+                // NOTE : CLR is broken 
         }
 
         // Print the final calculation total in console for debugging purposes
